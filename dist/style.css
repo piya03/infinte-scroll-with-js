@@ -1,0 +1,47 @@
+.container {
+  padding-bottom: 70px;
+}
+h1{
+      display: flex;
+    justify-content: center;
+
+}
+.box {
+    background: #f8f0ed;
+    padding: 5px 10px 30px 30px;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px grey;
+}
+.loading {
+  opacity: 0;
+  width: 50px;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  transform: translateX(-50%);
+}
+.ball {
+  height: 10px;
+  width: 10px;
+  background: gray;
+  border-radius: 50%;
+  animation: jump 0.5s ease-in infinite;
+}
+.ball:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.loading.show {
+  opacity: 1;
+}
+@keyframes jump {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
